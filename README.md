@@ -37,11 +37,11 @@ callback:
 		在游戏创建命令时被回调，我们可以在此时修改数据包。
 		此回调将在我们完成操作之后，进行bsendPacket设置和快进处理前进行。
 		
-		GameEvent
+		gameevent
 		输入参数:游戏事件对象。
 		在游戏事件被触发时被回调，我们可以监听游戏事件。
 		
-		OnShot
+		ragebotshot
 		输入参数:射击详细信息对象。
 		在ragebot进行射击时被回调，输入参数包含一些关于本次射击的信息。
 		
@@ -166,7 +166,7 @@ EntityList:
 utilities:
 
 	SetEspFont(string WindowsFontname)	//WARNING//未实装//WARNING//
-    SetBackground(string path)			//WARNING//未实装//WARNING//
+	SetBackground(string path)			//WARNING//未实装//WARNING//
     
     
 ui:
