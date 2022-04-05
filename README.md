@@ -42,13 +42,8 @@ callback:
 		在游戏事件被触发时被回调，我们可以监听游戏事件。
 		
 		ragebotshot
-		输入参数:射击详细信息对象。
-		在ragebot进行射击时被回调，输入参数包含一些关于本次射击的信息。
-		
-		OnShotEnd
-		输入参数:射击结果对象。
-		在射击的结果被处理时回调，包含射击是否命中等信息。
-		//WARNING//未实装//WARNING//
+		输入参数:RagebotShotInfo对象。
+		在ragebot进行射击时被回调，输入参数是一个RagebotShotInfo类型的对象。
 		
 		
 		关于类型的方法请看成员函数API。
@@ -164,14 +159,14 @@ EntityList:
     
  
 utilities:
-
-	SetEspFont(string WindowsFontname)	//WARNING//未实装//WARNING//
-	SetBackground(string path)			//WARNING//未实装//WARNING//
+	SetClantag(string);
     
     
 ui:
 	信息:目前您只能在lua选项卡中创建ui，对于其他选项卡的支持暂时不在计划中。
-	
+		这些函数都会返回一个界面项目的对象，请看此类的成员函数。
+	NewCheckBox(string)
+	NewText(string)
 	
 	
     
@@ -234,7 +229,17 @@ CUserCmd:
 	short mousedx
 	short mousedy
 	bool hasbeenpredicted
-	
+
+RagebotShotInfo:
+	string targetname
+	int target_entid
+	int Damage
+	int hitbox
+	int backtracktick
+	int pointtype
+
+Luauiitem:
+	bool GetBool()
 	
 CBasePlayer
 	bool IsAlive()
