@@ -141,7 +141,10 @@ EntityList:
 
 	CBasePlayer* GetEntity(int id)
 	CBasePlayer* GetLocal()
-	bool CheckEntity(CBasePlayer* entity,bool checknull,bool checkalive)
+	string GetPlayerName(CBasePlayer* entity)
+	int GetEntityIndexByUserid(int);
+	bool IsNull(CBasePlayer* entity)
+	
 	
 	Vector GetVectorNetvar(C_BasePlayer entity, string classname,string varname)
 	int GetIntNetvar(C_BasePlayer entity, string classname,string varname)
